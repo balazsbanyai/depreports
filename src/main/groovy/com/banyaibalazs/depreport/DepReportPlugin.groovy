@@ -7,7 +7,6 @@ import org.gradle.api.Plugin
 
 class DepReportPlugin implements Plugin<Project> {
 
-
    void apply(Project project) {
 
 
