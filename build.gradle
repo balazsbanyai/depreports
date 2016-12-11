@@ -1,5 +1,9 @@
 apply plugin: 'groovy'
 apply plugin: 'java-gradle-plugin'
+apply plugin: 'maven'
+
+group = 'com.banyaibalazs.depreport'
+version = '1.0.0'
 
 repositories {
     jcenter()
