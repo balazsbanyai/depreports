@@ -1,6 +1,7 @@
 package com.banyaibalazs.depreport
 
 import org.gradle.api.Project
+import com.google.common.base.Optional
 
 class LicenseFileResolverStrategy implements LicenseResolverStrategy {
 

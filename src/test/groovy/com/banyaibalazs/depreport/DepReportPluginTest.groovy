@@ -6,13 +6,10 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by bbanyai on 13/12/16.
- */
 public class DepReportPluginTest {
 
     @Test
-    public void greeterPluginAddsGreetingTaskToProject() {
+    public void depreportPluginAddsDepreportTaskToProject() {
         Project project = ProjectBuilder.builder().build();
         project.pluginManager.apply 'com.banyaibalazs.depreport'
 

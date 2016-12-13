@@ -1,6 +1,7 @@
 package com.banyaibalazs.depreport
 
 import java.util.jar.JarFile
+import com.google.common.base.Optional
 
 public class ManifestResolverStrategy implements LicenseResolverStrategy {
 

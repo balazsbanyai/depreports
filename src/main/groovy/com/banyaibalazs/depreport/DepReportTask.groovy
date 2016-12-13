@@ -3,6 +3,7 @@ package com.banyaibalazs.depreport
 import org.gradle.api.DefaultTask
 import org.gradle.api.reporting.Reporting
 import org.gradle.api.tasks.TaskAction
+import com.google.common.base.Optional
 
 public class DepReportTask extends DefaultTask implements Reporting<DepReportContainer> {
 
@@ -82,11 +83,11 @@ public class DepReportTask extends DefaultTask implements Reporting<DepReportCon
 
         resolversStrategies.each { resolver ->
 
-            Optional<LicenseData> resolvedResult = resolver.resolve(file)
+            LicenseData resolvedResult = resolver.resolve(file)
 
             try {
 
-                if (resolvedResult.isPresent()) {
+                if (resolvedResult != nl) {
                     result = resolvedResult.get()
                 }
 
