@@ -1,7 +1,5 @@
-import com.banyaibalazs.depreport.DepReportContainer
-import com.banyaibalazs.depreport.LicenseData
-import com.banyaibalazs.depreport.LicenseFileResolverStrategy
-import com.banyaibalazs.depreport.ManifestResolverStrategy
+package com.banyaibalazs.depreport
+
 import org.gradle.api.DefaultTask
 import org.gradle.api.reporting.Reporting
 import org.gradle.api.tasks.TaskAction
@@ -10,11 +8,10 @@ public class DepReportTask extends DefaultTask implements Reporting<DepReportCon
 
     Set<LicenseResolverStrategy> resolversStrategies;
 
-    DepReportTask() {
+    public DepReportTask() {
         resolversStrategies = new HashSet<>()
         resolversStrategies.add(new ManifestResolverStrategy());
         resolversStrategies.add(new LicenseFileResolverStrategy(project));
-
     }
 
     @TaskAction

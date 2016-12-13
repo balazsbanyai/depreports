@@ -1,6 +1,5 @@
 package com.banyaibalazs.depreport
 
-import javax.swing.text.html.Option
 import java.util.jar.JarFile
 
 public class ManifestResolverStrategy implements LicenseResolverStrategy {
