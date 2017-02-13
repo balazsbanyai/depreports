@@ -83,11 +83,11 @@ public class DepReportTask extends DefaultTask implements Reporting<DepReportCon
 
         resolversStrategies.each { resolver ->
 
-            LicenseData resolvedResult = resolver.resolve(file)
+            Optional<LicenseData> resolvedResult = resolver.resolve(file)
 
             try {
 
-                if (resolvedResult != nl) {
+                if (resolvedResult.isPresent()) {
                     result = resolvedResult.get()
                 }
 

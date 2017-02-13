@@ -13,7 +13,6 @@ public class ManifestResolverStrategy implements LicenseResolverStrategy {
         try {
             new JarFile(dependency).manifest.mainAttributes.each { entry ->
 
-
                 def candidate = entry.key.toString()
                 if (candidate.equalsIgnoreCase("Bundle-License")) {
                     result = new LicenseData(entry.value)
@@ -23,7 +22,7 @@ public class ManifestResolverStrategy implements LicenseResolverStrategy {
 
         }
 
-        return Optional.ofNullable(result)
+        return Optional.fromNullable(result)
     }
 
 }

@@ -26,7 +26,7 @@ class LicenseFileResolverStrategy implements LicenseResolverStrategy {
         }
 
 
-        return Optional.ofNullable(result)
+        return Optional.fromNullable(result)
     }
 
 }
